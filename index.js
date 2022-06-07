@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.get('/auth' , (req, res) => {
+app.get('/a' , (req, res) => {
     res.send('hi ')
 })
 
