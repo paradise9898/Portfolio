@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 
 
 app.get('/a' , (req, res) => {
-    res.render('schedule')
+    res.render('maintenence')
 })
 
 
@@ -38,7 +38,7 @@ app.post('/sch', (req, res) => {
 
 
 app.get('/thanks', (req, res) => {
-    res.send('scheduled')
+    res.render('maintenance')
 })
 //launch
 async function launch(){
