@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+    <link rel="stylesheet" href="/public/css/schedule.css" type="text/css">
+    
+</head>
+<body>
+    <label for="start">Schedule an appointment</label>
+
+
+    <form action="/sch" method="POST">
+    <input type="date" id="start" name="trip-start"
+           value="2018-07-22"
+           min="2018-01-01" max="2018-12-31">
+<div class="wow fadeInUp" data-wow-delay="1s">
+<button type="submit" id="submit" name="submit" class="btn btn-lg">SEND MESSAGE</button> <br> <br>
+ </div>
+</form>
+<script src="/public/js/schedule.js"></script>
+</body>
+</html>

@@ -25,10 +25,21 @@ app.get('/', (req, res) => {
 
 
 app.get('/a' , (req, res) => {
-    res.send('hi ')
+    res.render('schedule')
 })
 
 
+
+app.post('/sch', (req, res) => {
+    res.redirect('/thanks')
+})
+
+
+
+
+app.get('/thanks', (req, res) => {
+    res.send('scheduled')
+})
 //launch
 async function launch(){
     try {
