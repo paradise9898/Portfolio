@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 const schema = mongoose.Schema
 
 const MessagesSchema = new schema ({
-    Name:"name",
-    Email: "email",
-    Message: "message",
+    Name:{type: 'string'},
+    Email: {type: 'string'},
+    Message: {type: 'string'},
 })
 
-module.exports = mongoose.models("MessagesSchema", MessagesSchema)
+module.exports = mongoose.model("Messages", MessagesSchema)

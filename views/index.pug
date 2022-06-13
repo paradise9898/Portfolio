@@ -1,0 +1,334 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title RJ - Personal Webpage
+  title RJ
+  meta(name='description' content='Web designer and front-end developer')
+  link(href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css')
+  link(href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css' rel='stylesheet' type='text/css')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
+  link(href='/public/css/style.css' rel='stylesheet' type='text/css')
+// partial:index.partial.html
+// navbar header
+.nav-header
+  .nav-brand
+    img(src='https://s3-us-west-2.amazonaws.com/parallax-theme/assets/bradlogo2.png')
+  i.fa.fa-bars.fa-3x
+  .header-links
+    ul
+      li(data-menuanchor='fourthPage')
+        a(href='#contact') CONTACT
+      li(data-menuanchor='thirdPage')
+        a(href='#portfolio') PORTFOLIO
+      li(data-menuanchor='secondPage')
+        a(href='#about') ABOUT
+// end navbar header
+// sidebar slider
+.nav-screen
+  i.fa.fa-times.fa-3x
+  .nav-container
+    .nav-links
+      ul#myMenu
+        li(data-menuanchor='secondPage')
+          a(href='#about') ABOUT
+        li(data-menuanchor='thirdPage')
+          a(href='#portfolio') PORTFOLIO
+        li(data-menuanchor='fourthPage')
+          a(href='#contact') CONTACT
+// end navbar slider
+// begin fullpage
+#fullpage
+  // begin section
+  .section.aboutme(data-anchor='aboutme')
+    .opaque-bg.animated.fadeInDown
+      h1(style='color:white')
+        | Rauf
+        span(style='color:#FF6363') /
+        | Pashabayli
+      p
+        span#holder
+        span.blinking-cursor |
+    i#moveDown.fa.fa-chevron-down.fa-3x.bounce
+  // end section
+  // begin section
+  // Overall Skills
+  .section(data-anchor='skills')
+    .content
+      h1.wow.fadeInDown(data-wow-delay='0.2s') ABOUT ME
+      p.wow.fadeInDown(data-wow-delay='0.2s')
+        | Hi, I&apos;m Rauf Pashabayli! I&apos;m a TESOL Certified ESL Trainer, at the same time I&apos;am self-taught Backend Developer , focused on making the world a better place for cretivity!
+      .wow.fadeInUp.container-skillbar(data-wow-delay='0.2s')
+        .skillbar.clearfix(data-percent='90%')
+          .skillbar-title(style='background: #DD1E2F;')
+            span ESLTeaching
+          .skillbar-bar(style='background: #DD1E2F;')
+          .skill-bar-percent 90%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='88%')
+          .skillbar-title(style='background: #EBB035;')
+            span BackEndDev
+          .skillbar-bar(style='background: #EBB035;')
+          .skill-bar-percent 88%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='85%')
+          .skillbar-title(style='background: #218559;')
+            span PublicSpeakingCoaching
+          .skillbar-bar(style='background: #218559;')
+          .skill-bar-percent 85%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='80%')
+          .skillbar-title(style='background: #6840D4;')
+            span CyberSecurityEngineering
+          .skillbar-bar(style='background: #6840D4;')
+          .skill-bar-percent 80%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='50%')
+          .skillbar-title(style='background: #06A2CB;')
+            span WebDesigner
+          .skillbar-bar(style='background: #06A2CB;')
+          .skill-bar-percent 50%
+        // End Skill Bar
+  // teaching
+  .section(data-anchor='skills')
+    .content
+      h1.wow.fadeInDown(data-wow-delay='0.2s') Teaching
+      p.wow.fadeInDown(data-wow-delay='0.2s')
+        | Very Passionate About Teaching Students, I can teach: AcademicEnglish/ESL/ICT, My teaching Career has started along with University of Education Enrollment and TESOL Certification, overall experience is more than 7 years
+      .wow.fadeInUp.container-skillbar(data-wow-delay='0.2s')
+        .skillbar.clearfix(data-percent='98%')
+          .skillbar-title(style='background: #DD1E2F;')
+            span Communication
+          .skillbar-bar(style='background: #DD1E2F;')
+          .skill-bar-percent 98%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='95%')
+          .skillbar-title(style='background: #EBB035;')
+            span ClassroomManagement
+          .skillbar-bar(style='background: #EBB035;')
+          .skill-bar-percent 95%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='95%')
+          .skillbar-title(style='background: #218559;')
+            span ProgressReporting
+          .skillbar-bar(style='background: #218559;')
+          .skill-bar-percent 95%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='95%')
+          .skillbar-title(style='background: #6840D4;')
+            span Collaboration
+          .skillbar-bar(style='background: #6840D4;')
+          .skill-bar-percent 95%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='94%')
+          .skillbar-title(style='background: #06A2CB;')
+            span Patience
+          .skillbar-bar(style='background: #06A2CB;')
+          .skill-bar-percent 94%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='94%')
+          .skillbar-title(style='background: #AB4DD2;')
+            span Adaptability
+          .skillbar-bar(style='background: #AB4DD2;')
+          .skill-bar-percent 94%
+        // End Skill Bar
+  // end section
+  // Programming
+  .section(data-anchor='skills')
+    .content
+      h1.wow.fadeInDown(data-wow-delay='0.2s') Backend Developing &amp; CyberSecurityEngineering
+      p.wow.fadeInDown(data-wow-delay='0.2s')
+        | Self-Taught IT Specialist, Immersed in solving challenging problems, Testing the Security of sensitive information and seting up the security control system.
+      .wow.fadeInUp.container-skillbar(data-wow-delay='0.2s')
+        .skillbar.clearfix(data-percent='98%')
+          .skillbar-title(style='background: #DD1E2F;')
+            span CriticalThinking
+          .skillbar-bar(style='background: #DD1E2F;')
+          .skill-bar-percent 98%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='95%')
+          .skillbar-title(style='background: #EBB035;')
+            span HTML/CSS/JS
+          .skillbar-bar(style='background: #EBB035;')
+          .skill-bar-percent 95%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='95%')
+          .skillbar-title(style='background: #218559;')
+            span ApiDevelopment
+          .skillbar-bar(style='background: #218559;')
+          .skill-bar-percent 95%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='94%')
+          .skillbar-title(style='background: #6840D4;')
+            span KaliLinuxPentesting
+          .skillbar-bar(style='background: #6840D4;')
+          .skill-bar-percent 94%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='90%')
+          .skillbar-title(style='background: #06A2CB;')
+            span NoSqlDatabaseEngineering
+          .skillbar-bar(style='background: #06A2CB;')
+          .skill-bar-percent 90%
+        // End Skill Bar
+  // Public Speaking
+  .section
+    .content
+      h1.wow.fadeInDown(data-wow-delay='0.2s') Public Speaking Coach
+      p.wow.fadeInDown(data-wow-delay='0.2s')
+        | Public Speaking Coach that helps people to improve their public speaking skills, Working with Teahers, Students, Office staff, Public Speaking Starters.
+      .wow.fadeInUp.container-skillbar(data-wow-delay='0.2s')
+        .skillbar.clearfix(data-percent='98%')
+          .skillbar-title(style='background: #DD1E2F;')
+            span Communication
+          .skillbar-bar(style='background: #DD1E2F;')
+          .skill-bar-percent 98%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='97%')
+          .skillbar-title(style='background: #EBB035;')
+            span Enthusiasm
+          .skillbar-bar(style='background: #EBB035;')
+          .skill-bar-percent 97%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='97%')
+          .skillbar-title(style='background: #218559;')
+            span AudienceEngagement
+          .skillbar-bar(style='background: #218559;')
+          .skill-bar-percent 97%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='96%')
+          .skillbar-title(style='background: #6840D4;')
+            span EngagingPresentationStyle
+          .skillbar-bar(style='background: #6840D4;')
+          .skill-bar-percent 96%
+        // End Skill Bar
+        .skillbar.clearfix(data-percent='96%')
+          .skillbar-title(style='background: #06A2CB;')
+            span ContentStructuring
+          .skillbar-bar(style='background: #06A2CB;')
+          .skill-bar-percent 96%
+        // End Skill Bar
+  // begin section
+  .section(data-anchor='projects')
+    .content-slide
+      .slide
+        h1.wow.fadeInDown(data-wow-delay='0.2s') XFAIRE
+        p.wow.fadeInDown(data-wow-delay='0.2s') Digital streaming service
+        img.wow.fadeInUp(data-wow-delay='0.2s' data-src='https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/xfaire.jpg')
+      .slide
+        h1 MACHETE ENERGY
+        p Energy drink website
+        img(data-src='https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/machete.jpg')
+      .slide
+        h1 PORTFOLIO
+        p Mockup of a personal portfolio I was working on for a friend.
+        img(data-src='https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/cascioportfolio.jpg')
+      .slide
+        h1 THATONEBLOG
+        p Minimalist blogging platform.
+        img(data-src='https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/blog.jpg')
+      .slide
+        h1 PIXBORED
+        p Website for sharing images and gifs.
+        img(data-src='https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/pixbored.jpg')
+      .slide
+        h1 PERSONAL WEBSITE
+        p Responsive vertical/horizontal header website theme.
+        img(data-src='https://s3-us-west-2.amazonaws.com/bradengelhardt/assets/personalsite.jpg')
+  // end section
+  // begin section
+  .section(data-anchor='contact')
+    .content.wow.fadeInDown(data-wow-delay='0.2s')
+      h1 CONTACT ME
+      p
+        | Whether you&apos;re interested in working with me or just want to say hello, I&apos;d love to hear from you! 
+        br
+        a(href='http://localhost:3333/a') Click Here For Scheduling An Appointment.
+      br
+      .contact-form
+        #form-messages
+        form#ajax-contact(action='/sendmessage' method='post')
+          .form-group.has-feedback.wow.fadeInLeft(data-wow-delay='0.6s')
+            input#name.form-control(type='text' name='Name' placeholder='NAME')
+            span.form-control-feedback(aria-hidden='true')
+            .help-block.with-errors
+            .form-group.has-feedback.wow.fadeInRight(data-wow-delay='0.8s')
+          
+            input#email.form-control(type='text' name='Email' placeholder='EMAIL')
+            span.form-control-feedback(aria-hidden='true')
+            .help-block.with-errors
+          
+          .form-group.has-feedback.wow.fadeInRight(data-wow-delay='0.8s')
+            textarea#message.form-control(type='text' name='Message' placeholder='Message to be sent')
+            span.form-control-feedback(aria-hidden='true')
+            .help-block.with-errors
+          .form-group.has-feedback.wow.fadeInRight(data-wow-delay='0.8s')
+
+
+
+            //- input#Surname(type='text' placeholder='Surname' name='Surname' required='')
+            //- span.glyphicon.form-control-feedback(aria-hidden='true')
+            //-  .help-block.with-errors
+            //- .form-group.has-feedback.wow.fadeInRight(data-wow-delay='0.8s')
+
+            //- input#Email(type='text' placeholder='Email' name='Email' required='')
+            //- span.glyphicon.form-control-feedback(aria-hidden='true')
+            //-  .help-block.with-errors
+            //- .form-group.has-feedback.wow.fadeInRight(data-wow-delay='0.8s')
+
+            //- textarea#Password(type='text' placeholder='Password' name='Password' required='')
+            //- span.glyphicon.form-control-feedback(aria-hidden='true')
+            //-  .help-block.with-errors
+            //- .form-group.has-feedback.wow.fadeInRight(data-wow-delay='0.8s')
+            
+    
+            button#submit.btn.btn-lg(type='submit' name='submit') SEND MESSAGE
+      
+            br
+            br
+          br
+    button#submit.btn.btn-lg(onclick="location.href='http://localhost:3333/a'" type='button' name='submit') Click here to schedule an appointment
+  // end section
+  // begin section
+  .section.fp-auto-height
+    .footer
+      p CONNECT WITH ME
+      .social-links
+        span
+          a(href='https://www.linkedin.com/in/pashayev/' target='_blank')
+            i.fa.fa-linkedin.fa-2x
+        span
+          a(href='https://github.com/' target='_blank')
+            i.fa.fa-github.fa-2x
+  // end section
+// end fullpage
+// partial
+
+script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js')
+script(src='/public/js/index.js')
+
+
+script.
+  Document.getElementById('name').textContent = Name;
+  Document.getElementById('email').textContent = Email;
+  Document.getElementById('message').textContent = Message;
+  
+
+  const data = {Name, Email, Message};
+  const options = {
+  method: 'POST'
+  headers: {
+  'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(data)
+  };  
+  fetch('' , options)
+  console.log(Name)
+  console.log(Surname)
+  console.log(Email)
+  console.log(Message)
+
+  fetch('/req' , options)

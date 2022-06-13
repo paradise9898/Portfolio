@@ -1,7 +1,7 @@
 const messages = require('../models/messages')
 
 class Messages {
-    async sendMessage (req, res, next) {
+    async send (req, res, next) {
         try {
             const {Name, Email, Message} = req.body
             const Messages = new messages ({Name, Email, Message})
