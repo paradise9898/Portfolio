@@ -50,7 +50,7 @@ app.post('/sendmessage', async (req, res) => {
     const formData  = JSON.stringify( req.body);
     console.log(formData);
     const  http = new XMLHttpRequest();
-    const  url = "http://localhost:3333/sendmessage/message"
+    const  url = "https://rj-personal-website.herokuapp.com/sendmessage/message"
     const  method = "POST";
     const  data = formData
 
@@ -64,27 +64,6 @@ app.post('/sendmessage', async (req, res) => {
 
     http.send(data);
 })
-
-//-   form#ajax-contact(method='post' action='/sendmessage')
-          //- .form-group.has-feedback.wow.fadeInLeft(data-wow-delay='0.6s')
-          //-   input#Name(type='text' name='name' placeholder='NAME' data-error="Field can't be blank!" required='')
-           
-          //- .form-group.has-feedback.wow.fadeInRight(data-wow-delay='0.8s')
-          //-   input#Email(type='email' name='email' placeholder='EMAIL' data-error="Field can't be blank!" required='')
-          //-   span.glyphicon.form-control-feedback(aria-hidden='true')
-          //-   .help-block.with-errors
-          //- .form-group.has-feedback.wow.fadeInLeft(data-wow-delay='1s')
-          //-   textarea#Message form-control(data-minlength='10' name='message' placeholder='MESSAGE' data-error='Minimum of 10 characters' required='')
-          //-   span.glyphicon.form-control-feedback(aria-hidden='true')
-          //-   .help-block.with-errors
-          //- .hidden
-          //-   input#human.form-control(type='text' placeholder='')
-          //- .wow.fadeInUp(data-wow-delay='1s')
-          //-   button#submit.btn.btn-lg(type='submit' name='submit') SEND MESSAGE
-          //-   br
-          //-   br
-          //- br
-
 
 //launch
 async function launch(){
