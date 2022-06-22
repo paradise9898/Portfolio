@@ -29,11 +29,9 @@ head
                 i.fa.fa-clock
             br
             label Message
-            #timepicker.input-group.time
-              input#message.form-control(placeholder="Message" type='text' name='message')
-              span.input-group-append.input-group-addon
-               span.input-group-text
-                
+            #datepicker.input-group.date
+              textarea#message.form-control(type='text' name='message' placeholder="Appointment Details")
+
             br
             button(type='submit') submit
 
@@ -51,7 +49,7 @@ script.
   Document.getElementById('message').textContent = Message;
   
 
-  const data = {Date, Time, Message};
+  const data = {Date, Time};
   const options = {
   method: 'POST'
   headers: {
@@ -62,6 +60,4 @@ script.
   fetch('' , options)
   console.log(date)  
   console.log(time)
-  console.log(message)
-  
   fetch('/req' , options)

@@ -85,7 +85,7 @@ app.get('/thanks', (req, res)=>{
 //launch
 async function launch(){
     try {
-        await mongoose.connect('mongodb+srv://SendMessage:SendMessage@sendmessage.vlb90.mongodb.net/?retryWrites=true&w=majority')
+        await mongoose.connect('mongodb+srv://rj98:rj9898@scheduleandmessages.ujfyg.mongodb.net/?retryWrites=true&w=majority')
     } catch (error) {
         console.log(error);
     }
