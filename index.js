@@ -2,6 +2,7 @@ const express = require('express')
 const res = require('express/lib/response')
 const app = express()
 const MessagesRouter = require('./routes/messagesRoutes')
+const MeetingsRoutes = require('./routes/meetingsRoutes')
 const mongoose = require('mongoose')
 const XMLHttpRequest = require('xhr2')
 const PORT = process.env.PORT || 3333
@@ -17,7 +18,7 @@ app.use(express(__dirname + '/views'))
 app.use("/public", express.static(path.join(__dirname, 'public')));
 
 app.use('/sendmessage', MessagesRouter)
-
+app.use('/api', MeetingsRoutes)
 //routes
 app.get('/', (req, res) => {
     res.render('index')
@@ -25,21 +26,10 @@ app.get('/', (req, res) => {
 
 
 app.get('/a' , (req, res) => {
-    res.render('maintenence')
+    res.render('schedule')
 })
 
 
-
-app.post('/sch', (req, res) => {
-    res.redirect('/thanks')
-})
-
-
-
-
-app.get('/thanks', (req, res) => {
-    res.render('maintenance')
-})
 
 
 
@@ -63,6 +53,28 @@ app.post('/sendmessage', async (req, res) => {
     }
 
     http.send(data);
+})
+
+
+app.post('/api', async (req, res) => {
+    const formData  = JSON.stringify( req.body);
+    console.log(formData);
+    const  http = new XMLHttpRequest();
+    const  url = "https://rj-personal-website.herokuapp.com/api/meetings"
+    const  method = "POST";
+    const  data = formData
+
+    http.open(method, url,);
+    http.setRequestHeader('Content-Type', 'application/json');
+    http.onreadystatechange = function(){
+      if (http.readyState === XMLHttpRequest.DONE && http.status === 201){
+        console.log(JSON.parse(http.responseText));
+      }
+    }
+
+    http.send(data);
+
+
 })
 
 //launch

@@ -1,0 +1,58 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Meetings schedule
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css')
+  link(rel='stylesheet' href='/public/css/schedule.css')
+// partial:index.partial.html
+.container-fluid
+  .row
+    .col-lg-6.offset-lg-3.col-md-8.offset-md-2
+      .content
+        h1 APPOINTMENT
+        .form-group
+          form(action='/api' method='post')
+            label Date
+            #datepicker.input-group.date
+              input#date.form-control(type='text' name='date')
+              span.input-group-append.input-group-addon
+               span.input-group-text
+                i.fa.fa-calendar
+            br        
+            label Time
+            #timepicker.input-group.time
+              input#time.form-control(type='text' name='time')
+              span.input-group-append.input-group-addon
+               span.input-group-text
+                i.fa.fa-clock
+            br
+            button(type='submit') submit
+
+// partial
+script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js')
+script(src='/public/js/schedule.js')
+
+
+script.
+  Document.getElementById('date').textContent = Date;
+  Document.getElementById('time').textContent = Time;
+  //- Document.getElementById('message').textContent = Message;
+  
+
+  const data = {Date, Time};
+  const options = {
+  method: 'POST'
+  headers: {
+  'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(data)
+  };  
+  fetch('' , options)
+  console.log(date)  
+  console.log(time)
+  fetch('/req' , options)
