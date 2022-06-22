@@ -4,7 +4,8 @@ const schema = mongoose.Schema
 
 const MeetingsSchema = new schema ({
     date:{type: 'string'},
-    time:{type: 'string'}
+    time:{type: 'string'},
+    messages:{type: 'string'}
 })
 
 module.exports = mongoose.model('Meetings', MeetingsSchema)

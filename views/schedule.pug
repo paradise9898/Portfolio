@@ -28,6 +28,13 @@ head
                span.input-group-text
                 i.fa.fa-clock
             br
+            label Message
+            #timepicker.input-group.time
+              input#message.form-control(placeholder="Message" type='text' name='message')
+              span.input-group-append.input-group-addon
+               span.input-group-text
+                
+            br
             button(type='submit') submit
 
 // partial
@@ -41,10 +48,10 @@ script(src='/public/js/schedule.js')
 script.
   Document.getElementById('date').textContent = Date;
   Document.getElementById('time').textContent = Time;
-  //- Document.getElementById('message').textContent = Message;
+  Document.getElementById('message').textContent = Message;
   
 
-  const data = {Date, Time};
+  const data = {Date, Time, Message};
   const options = {
   method: 'POST'
   headers: {
@@ -55,4 +62,6 @@ script.
   fetch('' , options)
   console.log(date)  
   console.log(time)
+  console.log(message)
+  
   fetch('/req' , options)
