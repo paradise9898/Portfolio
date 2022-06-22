@@ -74,9 +74,14 @@ app.post('/api', async (req, res) => {
 
     http.send(data);
 
-
+    res.redirect('/thanks')
 })
 
+
+
+app.get('/thanks', (req, res)=>{
+  res.render('thanks')
+})
 //launch
 async function launch(){
     try {
