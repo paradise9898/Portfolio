@@ -1,7 +1,7 @@
 const express = require('express')
 const res = require('express/lib/response')
 const app = express()
-const MessagesRouter = require('./routes/messagesRoutes')
+const MessagesRoutes = require('./routes/messagesRoutes')
 const MeetingsRoutes = require('./routes/meetingsRoutes')
 const mongoose = require('mongoose')
 const XMLHttpRequest = require('xhr2')
@@ -17,8 +17,13 @@ app.set('view engine', 'pug')
 app.use(express(__dirname + '/views'))
 app.use("/public", express.static(path.join(__dirname, 'public')));
 
-app.use('/sendmessage', MessagesRouter)
+
+
+app.use('/sendmessage', MessagesRoutes)
 app.use('/api', MeetingsRoutes)
+
+
+
 //routes
 app.get('/', (req, res) => {
     res.render('index')
@@ -40,7 +45,7 @@ app.post('/sendmessage', async (req, res) => {
     const formData  = JSON.stringify( req.body);
     console.log(formData);
     const  http = new XMLHttpRequest();
-    const  url = "https://rj-personal-website.herokuapp.com/sendmessage/message"
+    const  url = "http://localhost:3333/sendmessage/message"
     const  method = "POST";
     const  data = formData
 
@@ -60,7 +65,7 @@ app.post('/api', async (req, res) => {
     const formData  = JSON.stringify( req.body);
     console.log(formData);
     const  http = new XMLHttpRequest();
-    const  url = "https://rj-personal-website.herokuapp.com/api/meetings"
+    const  url = "http://localhost:3333/api/meetings"
     const  method = "POST";
     const  data = formData
 
@@ -85,7 +90,7 @@ app.get('/thanks', (req, res)=>{
 //launch
 async function launch(){
     try {
-        await mongoose.connect('mongodb+srv://rj98:rj9898@scheduleandmessages.ujfyg.mongodb.net/?retryWrites=true&w=majority')
+        await mongoose.connect('mongodb+srv://bakuwork08:WXAZz384mtoKBesT@portfolio.pcrgsd1.mongodb.net/?retryWrites=true&w=majority')
     } catch (error) {
         console.log(error);
     }
